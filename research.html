@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Diferença entre block, inline, flex e inline-flex</title>
+<style>
+  form {
+      background-image: url(imgs/download.jpg);
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 400px;
+    }
+
+  textarea {
+      width: 100%;
+      height: 120px;   
+      padding: 8px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      resize: vertical; 
+    }
+
+  @font-face {
+    font-family: 'Pixel';
+    src: url('font/DePixelHalbfett.otf') format('opentype'), url('font/DePixelHalbfett.ttf') format('truetype');
+    font-size: small;
+  }
+
+  body {
+    font-family: "Pixel";
+    background-image: url(imgs/wall-texture.webp);
+    color: white;
+  }
+
+  h1 { margin: 0 0 16px; }
+  h2 { font-size: 18px; margin: 22px 0 8px; }
+
+  .box {
+    background-image: url(imgs/download.jpg);
+    padding: 10px;
+  }
+
+  .box label {
+    background: rgb(177, 124, 11);
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin: 6px;
+  }
+
+  .demo-inlineflex label {
+    display: inline-flex;     
+    align-items: center;       
+    gap: 6px;
+  }
+</style>
+</head>
+<body>
+
+  <div>
+    <h1>Questionário sobre sua opinião sobre o jogo</h1>
+  </div>
+
+  <h2>Quais criaturas mais fortes em sua opinião?</h2>
+  <div class="box demo-inlineflex">
+    <label><input type="checkbox" name="criaturas[]" value="IMP"> IMP</label>
+    <label><input type="checkbox" name="criaturas[]" value="ZOMBIEMAN"> ZOMBIEMAN</label>
+    <label><input type="checkbox" name="criaturas[]" value="CACODEMON"> CACODEMON</label>
+    <label><input type="checkbox" name="criaturas[]" value="PINKY"> PINKY</label>
+    <label><input type="checkbox" name="criaturas[]" value="LOST SOUL"> LOST SOUL</label>
+    <label><input type="checkbox" name="criaturas[]" value="PAIN ELEMENTAL"> PAIN ELEMENTAL</label>
+    <label><input type="checkbox" name="criaturas[]" value="BARON OF HELL"> BARON OF HELL</label>
+    <label><input type="checkbox" name="criaturas[]" value="ARACHNOTRON"> ARACHNOTRON</label>
+  </div>
+
+  <br>
+
+  <h2>Você já jogou esse game?</h2>
+  <div class="radio box demo-inlineflex">
+    <label><input type="radio" name="jogou" value="sim"> Sim</label>
+    <label><input type="radio" name="jogou" value="nao"> Não</label>
+  </div>
+
+  <br>
+
+  <h2>O que acha do jogo?</h2>
+  <div class="radio box demo-inlineflex">
+    <label><input type="radio" name="opiniao" value="muito_ruim"> Muito ruim</label>
+    <label><input type="radio" name="opiniao" value="ruim"> Ruim</label>
+    <label><input type="radio" name="opiniao" value="mediano"> Mediano</label>
+    <label><input type="radio" name="opiniao" value="bom"> Bom</label>
+    <label><input type="radio" name="opiniao" value="muito_bom"> Muito bom</label>
+  </div>
+
+  <h2>Resenha</h2>
+  <form>
+    <label for="mensagem">Deixe sua resenha aqui:</label><br><br>
+    <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..."></textarea>
+  </form>
+
+  <br><br>
+  <form action="obrigado.html" method="get">
+    <label for="nome">Seu nome:</label>
+    <input type="text" id="nome" name="nome">
+    <button type="submit">Enviar</button>
+  </form>
+
+
+</body>
+</html>
